@@ -1,0 +1,140 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "nav main"
+        "footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #FFD292;
+    background-image: url("https://i.pinimg.com/originals/93/67/60/936760c0dfdcecc37e3e8b2c54575911.jpg");
+    padding: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f5f5dc;
+}
+
+main p{
+    margin-bottom: 20px;
+}
+
+
+
+main backquote{
+    font-style: italic;
+    margin: 20pc 0;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #DDBD8E;
+    color: #DDBD8E;
+    padding: 20px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #f5f5dc;
+    text-decoration: none;
+    transition: color 0.3s ease-out; 
+}
+
+nav ul li a:hover {
+    color: rgb(42, 105, 108);
+}
+
+
+
+.text {
+    width: 500px;
+    padding: 0 20px;
+    margin-left: 39px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f5f5dc;
+    text-align: center;
+    pointer-events: none;
+    opacity: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: left;
+    display: flex;
+}
+
+
+ul.contact1 li:before{
+    color: #ffff;
+}
+
+main {
+    grid-area: main;
+    background-color: #CEA17B;
+    padding: 20px;
+    color:#f5f5dc;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #D78050;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #D78050;
+  }
+  
+  th {
+    background-color: #D78050;
+    color: #564946;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #564946;
+  }
+  
+  
+  
+
+footer {
+    grid-area: footer;
+    background-color: #D78050; 
+    padding: 20px;
+    text-align: center;
+    color: #f5deb3;
+}

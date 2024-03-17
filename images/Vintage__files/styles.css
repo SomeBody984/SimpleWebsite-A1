@@ -1,0 +1,191 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "nav header"
+        "nav main"
+        "nav footer";
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #FFD292;
+    background-image: url("https://i.pinimg.com/originals/93/67/60/936760c0dfdcecc37e3e8b2c54575911.jpg");
+    padding: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: beige;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #DDBD8E;
+    color: #DDBD8E;
+    padding: 10px;
+}
+
+nav ul {
+    padding: 25px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-bottom: 50px;
+    color: #F5F5DC;
+    text-align: center;
+}
+
+nav ul li a {
+    padding: 25px 10px;
+    color: #F5F5DC;
+    text-decoration: none;
+    transition: color 0.3s ease-out; 
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul li a:hover {
+    color: rgb(42, 105, 108);
+    text-decoration: underline;
+}
+
+nav ul li a:not(:last-child):after {
+    content: ".";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    border-bottom: 1px dotted #F5F5DC;
+    transform: translateY(-50%);
+}
+
+main {
+    grid-area: main;
+    background-color: #CEA17B;
+    padding: 20px;
+}
+
+table a.button {
+    color: #696969;
+}
+
+
+.container {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 20px;
+    align-items: center;
+    display: inline-block;
+    position: relative;
+}
+
+
+
+Table{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
+
+.text {
+    width: 500px;
+    padding: 0 20px;
+    margin-left: 39px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: beige;
+    text-align: center;
+    pointer-events: none;
+    opacity: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: left;
+    display: flex;
+    color: #ffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.7;
+    margin: 10px;
+    text-align: justify;
+    text-decoration: none;
+    text-indent: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text .default-text {
+    display: block; 
+}
+
+.text .hover-text {
+    display: none; 
+    width: 160%;
+    padding-left: 50px;
+    font-size: 10px;
+    padding-right: 50px;
+}
+
+.container:hover .text .default-text {
+    display: none; 
+}
+
+.container:hover .text .hover-text {
+    display: block; 
+    color: black; 
+    padding-right: 50px;
+}
+
+.container img {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 80px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), filter 0.2s linear;
+    border-radius: 15px;
+}
+
+.container img:hover {
+    transform: scale(2, 1);
+    filter: brightness(0) invert(1);
+}
+
+footer {
+    grid-area: footer;
+    background-color: #D78050; 
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: wheat;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    nav, footer {
+        text-align: center;
+    }
+}
